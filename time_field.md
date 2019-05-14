@@ -19,11 +19,12 @@ where('create_time', Db::raw(0))  create_time = 0
 ```
 
 5.1
+```
 where('create_time', 0)    => create_time = 0
 whereTime('create_time', 0) => create_time >= 0
 where('create_time = 0')   => create_time = 0
 where('create_time', Db::raw(0))  create_time = 0
-
+```
 所以在使用datetime 默认值为0 的时候 尽量 用 字符串查询或者 Db:raw的方式来保证查询结果为正确未设置过时间的数据
 
 # 参考文档
