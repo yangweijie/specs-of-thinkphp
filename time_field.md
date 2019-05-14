@@ -25,3 +25,7 @@ where('create_time = 0')   => create_time = 0
 where('create_time', Db::raw(0))  create_time = 0
 
 所以在使用datetime 默认值为0 的时候 尽量 用 字符串查询或者 Db:raw的方式来保证查询结果为正确未设置过时间的数据
+
+# 参考文档
+
+[MySQL 中的日期时间类型](http://www.cnblogs.com/Wayou/p/mysql_data_type_datetime.html?utm_source=tuicool&utm_medium=referral)
